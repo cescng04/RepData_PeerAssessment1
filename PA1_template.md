@@ -29,13 +29,13 @@ A histogram is then plotted to observe the distribution.
 The mean and median total number of steps taken each day can be obtained
 using the mean() and median() functions.
 
-    mean(df$steps, na.rm = T)
+    mean(steps$steps, na.rm = T)
 
-    ## [1] 37.3826
+    ## [1] 10766.19
 
-    median(df$steps, na.rm = T)
+    median(steps$steps, na.rm = T)
 
-    ## [1] 0
+    ## [1] 10765
 
 ### Average Daily Activity Pattern
 
@@ -95,13 +95,13 @@ each day with the new values.
 
 ![](PA1_template_files/figure-markdown_strict/re-examine-1.png)
 
-    mean(df$steps)
+    mean(steps$steps.x)
 
-    ## [1] 37.32559
+    ## [1] 10749.77
 
-    median(df$steps)
+    median(steps$steps.x)
 
-    ## [1] 0
+    ## [1] 10641
 
 From the results, it can be seen that the distribution is largely
 similar to the first part. The mean and median are also very close.

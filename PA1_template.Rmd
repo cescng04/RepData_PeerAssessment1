@@ -2,7 +2,7 @@
 title: "Course Project 1"
 author: "Wei Jie"
 date: "31 December 2019"
-output: html_document
+output: md_document
 ---
 
 ```{r setup, include=FALSE}
@@ -37,8 +37,8 @@ hist(steps$steps, col = "green", main = "Distribution of Total Number of Steps T
 The mean and median total number of steps taken each day can be obtained using the mean() and median() functions.
 
 ```{r summary}
-mean(df$steps, na.rm = T)
-median(df$steps, na.rm = T)
+mean(steps$steps, na.rm = T)
+median(steps$steps, na.rm = T)
 ```
 
 ### Average Daily Activity Pattern
@@ -91,8 +91,8 @@ We now re-examine the distribution of the total number of steps taken each day w
 ```{r re-examine}
 steps = aggregate(steps.x ~ date, data = df, sum)
 hist(steps$steps, col = "blue", main = "Distribution of Total Number of Steps Taken Each Day (With Missing Data Filled)", xlab = "Total Number of Steps Taken Each Day")
-mean(df$steps)
-median(df$steps)
+mean(steps$steps.x)
+median(steps$steps.x)
 ```
 
 From the results, it can be seen that the distribution is largely similar to the first part. The mean and median are also very close. Hence, the impact of imputing missing data on the estimates of the total daily number of steps is very minimal.
